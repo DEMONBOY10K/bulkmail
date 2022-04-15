@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BULK MAIL | BULK MAILING MADE EASY</title>
+    <link rel="icon" href="img/mailicon.png" type = "image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bubble.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body">
+    <section id="headingsection">
+      <div class="mainheader">
+        <div class="heading">
+          <h1>BULK MAIL</h1>
+        </div>
+          <a id="scroller" class="arrow" href="#mailingsection"></a>
+      </div>
+    </section>
+    
+    <section id="mailingsection">
+      <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span id="title1">Email Service</span>
+                  <span id="title2">Send Email in Bulk</span>
+                </div>
+                <div class="app-emailpreview customscrollbar">
+                  <div id="preview-heading">Addresses Found : </div>
+                  <p id="preview"></p>
+                </div>
+                <div class="app-contact">
+                  CONTACT INFO : demonboyemailservice@gmail.com
+                </div>
+              </div>
+              <div class="screen-body-item right">
+                <form
+                  id="myForm"
+                  class="app-form customscrollbar"
+                  method="post"
+                  autocomplete="off"
+                >
+                  <div class="app-form-group">
+                    <input
+                      class="app-form-control"
+                      maxlength="40"
+                      placeholder="NAME"
+                      id="name"
+                      
+                    />
+			              <i class="invalid">
+                    </i>
+			              <small>Error message</small>
+                  </div>
+                  <div class="app-form-group">
+                    <select name="" id="selector" class="app-form-control">
+                      <option value="Email" selected>Single Mail</option>
+                      <option value="CSV">Multiple (Using .csv File)</option>
+                    </select>
+                  </div>
+                  <div class="app-form-group" id="address-form-group">
+                    <input
+                      class="app-form-control"
+                      id="address"
+                      type="email"
+                      placeholder="EMAIL"
+                      autocomplete="off"
+
+                    />
+                    <i class="invalid"></i>
+			              <small>Error message</small>
+                  </div>
+                  <div class="app-form-group" id="csv-form-group">
+                    <input
+                      class="app-form-control"
+                      type="file"
+                      id="csvFile"
+                      accept=".csv"
+                    />
+                    <i class="invalid"></i>
+			              <small>Error message</small>
+                    
+                  </div>
+                  <div class="app-form-group">
+                    <input
+                      class="app-form-control"
+                      placeholder="SUBJECT"
+                      id="subject"
+                      maxlength="150"
+                    />
+                    <i class="invalid"></i>
+			              <small>Error message</small>
+                  </div>
+                  <div class="app-form-group message">
+                    <textarea
+                      class="app-form-control"
+                      placeholder="BODY"
+                      rows="3"
+                      id="mailbody"
+                    ></textarea>
+                    <i class="invalid"></i>
+			              <small>Error message</small>
+                  </div>
+                  <div class="app-form-group buttons">
+                    <button class="app-form-button" id="reset" type="reset">
+                      CANCEL
+                    </button>
+                    <button class="app-form-button" id="submit">
+                      SEND
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <dialog id="popup-container">
+                <div class="screen-header" id="popup-header">
+                  <div class="screen-header-left">
+                    <div class="screen-header-button close"></div>
+                    <div class="screen-header-button maximize"></div>
+                    <div class="screen-header-button minimize"></div>
+                  </div>
+                  <div class="screen-header-center" id="popup-heading">
+                    SENDING
+                  </div>
+                  <div class="screen-header-right">
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                  </div>
+                </div>
+                <div class="popup-log-container customscrollbar">
+                  <div id="loading-box">
+                    <div class="loading">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                  <p id="print-log"></p>
+                </div>
+                <button id="popup-exit">CLOSE</button>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jsp/csvtoarray.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="jsp/smtpsendemail.js"></script>
+    <script src="jsp/formmanipulation.js"></script>
+    <script src="jsp/popup.js"></script>
+    <script src="jsp/executesending.js"></script>
+    <script src="jsp/headingbubbles.js"></script>
+
+  </body>
+</html>
